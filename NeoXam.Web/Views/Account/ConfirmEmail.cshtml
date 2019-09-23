@@ -1,0 +1,15 @@
+﻿@{
+   Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-center mt-0 m-b-15">
+    <a href="#" class="logo logo-admin"><img src="~/assets/images/Logo.jpeg" height="150" alt="logo"></a>
+</h3>
+<h4 class="text-muted text-center font-18"><b>Confirm Email</b></h4>
+<div class="p-3">
+    <div>
+        <p>
+            Thank you for confirming your email. Please @Html.ActionLink("Click here to Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+        </p>
+    </div>
+ </div>

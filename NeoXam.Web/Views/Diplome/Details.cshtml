@@ -1,0 +1,51 @@
+﻿@model NeoXam.Web.Models.diplome
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>diplome</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ecole.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ecole.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employe.adresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employe.adresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.diplomeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,76 @@
+﻿@model IEnumerable<NeoXam.Domain.Entities.reclamation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.commentaire)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateCreation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTraitement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.etat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motifs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_CIN)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.commentaire)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateCreation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateTraitement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.etat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motifs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_CIN)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idReclamation }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idReclamation }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idReclamation })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,67 @@
+﻿@model NeoXam.Domain.Entities.formation
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>formation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateDebut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateDebut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.libelle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.libelle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lieux)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lieux)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Responsable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Responsable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.formateurid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.formateurid)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idFormation }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

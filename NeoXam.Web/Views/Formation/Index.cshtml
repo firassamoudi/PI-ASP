@@ -1,0 +1,64 @@
+﻿@model IEnumerable<NeoXam.Domain.Entities.formation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateDebut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.libelle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lieux)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Responsable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.formateurid)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateDebut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.libelle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lieux)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Responsable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.formateurid)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idFormation }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idFormation }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idFormation })
+        </td>
+    </tr>
+}
+
+</table>

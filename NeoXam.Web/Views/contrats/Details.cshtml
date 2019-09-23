@@ -1,0 +1,59 @@
+﻿@model NeoXam.Web.Models.contrat
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>contrat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.salaire.idSalaire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salaire.idSalaire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateDep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateDep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateFin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateFin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idEmploye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEmploye)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idContrat }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

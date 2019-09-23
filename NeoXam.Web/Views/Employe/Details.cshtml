@@ -1,0 +1,187 @@
+﻿@model NeoXam.Domain.Entities.employe
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>employe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.adresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.haveC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.haveC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.joinDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.joinDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nbJours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nbJours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numTel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numTel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prenom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prenom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rib)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rib)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdContraEmploye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdContraEmploye)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idDep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idDep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employeCIN1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeCIN1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.employeCIN2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employeCIN2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idEquipe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEquipe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idGrade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idGrade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIN_Man)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIN_Man)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idMetier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idMetier)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CIN }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

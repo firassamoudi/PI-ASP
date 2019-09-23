@@ -1,0 +1,52 @@
+﻿@model IEnumerable<NeoXam.Domain.Entities.produit>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.datedeDebut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datefin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.datedeDebut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.datefin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idPro }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idPro }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idPro })
+        </td>
+    </tr>
+}
+
+</table>

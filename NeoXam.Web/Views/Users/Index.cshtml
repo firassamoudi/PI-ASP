@@ -1,0 +1,94 @@
+﻿@model IEnumerable<NeoXam.Domain.Entities.user>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.actif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email_canonical)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastLogin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username_canonical)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CAN_CIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_CIN)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.actif)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email_canonical)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastLogin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.username_canonical)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAN_CIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_CIN)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idU }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idU }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idU })
+        </td>
+    </tr>
+}
+
+</table>

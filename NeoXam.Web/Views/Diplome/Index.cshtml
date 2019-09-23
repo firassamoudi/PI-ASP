@@ -1,0 +1,52 @@
+﻿@model IEnumerable<NeoXam.Web.Models.diplome>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ecole.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.employe.adresse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ecole.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employe.adresse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.diplomeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.diplomeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.diplomeId })
+        </td>
+    </tr>
+}
+
+</table>

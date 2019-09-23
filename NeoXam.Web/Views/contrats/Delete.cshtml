@@ -1,0 +1,65 @@
+﻿@model NeoXam.Web.Models.contrat
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>contrat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.salaire.idSalaire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salaire.idSalaire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateDep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateDep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateFin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateFin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idEmploye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEmploye)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
